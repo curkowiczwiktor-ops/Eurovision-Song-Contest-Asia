@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eurowizja Azja</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="nav-hidden" aria-label="Nawigacja główna">
+      <a href="#start">Start</a>
+      <a href="#eurowizja azja2026 w skrócie">Eurovision Song Contest Asia 2026 w skrócie</a>
+    </nav>
+
+    <header id="start">
+      <div class="header-content">
+        <p class="eyebrow">Muzyka, emocje i sceniczne show</p>
+        <h1>Strona o Eurovision Song Contest Asia</h1>
+        <p class="subtitle">Aktualizacje prawie co dziennie</p>
+
+        <div class="header-actions">
+          <a class="primary-btn" href="#eurowizja azja2026 w skrócie">Zobacz więcej</a>
+          <a class="secondary-btn" href="#eurowizja azja2026 w skrócie"> Eurovision Song Contest Asia 2026 w skrócie</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+        <section id="eurowizja azja2026 w skrócie" class="light z-obrazem">
+            <img
+            class="side-image"
+            src="https://s13.tvp.pl/images2/c/9/e/uid_c9e19a94c20e420d8ea7ac61313b3a49_width_1280_play_0_pos_0_gs_0_height_720.jpg"
+            alt="Eurowizja Azja 2026"
+            />
+            <div class="tekst">
+                <h2>Eurowizja Azja 2026 w skrócie</h2>
+                <p>Fani Eurowizji mogą szykować się na wyjątkowe wydarzenie!
+                     Już 14 listopada 2026 roku odbędzie się pierwsza edycja Eurovision Song Contest Asia (ESCA).
+                      Konkurs zostanie zorganizowany w Bangkoku w Tajlandii, a na scenie zobaczymy reprezentantów 11 państw.</p>
+                <h3>11 państw, 11 piosenek i jeden zwycięzca</h3>
+                <p>W inauguracyjnej edycji ESCA udział wezmą:</p>
+                <ul>
+                    <li>Wietnam</li>
+                    <li>Kambodża</li>
+                    <li>Laos</li>
+                    <li>Mongolia</li>
+                    <li>Bhutan</li>
+                    <li>Filipiny</li>
+                    <li>Bangladesz</li>
+                    <li>Tajlandia</li>
+                    <li>Korea Południowa</li>
+                    <li>Nepal</li>
+                    <li>Malezja</li>
+                </ul>
+                <p>Każdy kraj zaprezentuje swoją propozycję muzyczną, a zwycięzca zapisze się w historii jako pierwszy triumfator Eurovision Song Contest Asia.</p>
+                <h3>Wielkie gwiazdy na scenie!</h3>
+                <p>Organizatorzy przygotowali również występy specjalnych gości.
+                     Podczas wydarzenia pojawią się DARA, zwyciężczyni Eurowizji 2026, oraz popularny tajski artysta JEFF SATUR.</p>
+                <p>Gospodarzami wydarzenia będą Woody Milintachinda i Cindy Bishop.</p>
+                <h3>Jak będzie wyglądać głosowanie?</h3>
+                <p>O końcowym wyniku zdecydują dwie grupy:</p>
+                <ul>
+                    <li>Jury – 50% wyniku.</li>
+                    <li>Publiczność – 50% wyniku.</li>
+                </ul>
+                <p>Co ciekawe, głosować będą mogli również fani spoza państw uczestniczących.
+                     Oznacza to, że głos z Polski również może mieć znaczenie!</p>
+                <h3>Kiedy i gdzie oglądać ESCA 2026?</h3>
+                <p>Wielki finał odbędzie się w sobotę, 14 listopada 2026 roku, o godzinie 14:30 czasu polskiego.
+                     Transmisja będzie dostępna na oficjalnym kanale Eurovision Song Contest w serwisie YouTube.</p>
+                <h3>Kto zostanie pierwszym zwycięzcą?</h3>
+                <p>Czy triumfować będzie gospodarz konkursu, czyli Tajlandia?
+                     A może zwycięstwo powędruje do Wietnamu, Filipin lub Korei Południowej?</p>
+                <p>Jedno jest pewne – przed nami historyczna pierwsza edycja azjatyckiego konkursu!</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+      <p>Ostatnia aktualizacja: 07.11.2026</p>
+    </footer>
+    <script>
+      const navigation = document.querySelector("nav");
+      const heroButtons = document.querySelector(".header-actions");
+
+      if (navigation && heroButtons && "IntersectionObserver" in window) {
+        const buttonsObserver = new IntersectionObserver(([entry]) => {
+          navigation.classList.toggle("nav-hidden", entry.isIntersecting);
+        });
+
+        buttonsObserver.observe(heroButtons);
+      } else if (navigation) {
+        navigation.classList.remove("nav-hidden");
+      }
+    </script>
+  </body>
+</html>
