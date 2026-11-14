@@ -161,6 +161,8 @@ section {
 }
 
 .tekst {
+  flex: 1 1 0;
+  min-width: 0;
   max-width: 900px;
 }
 
@@ -189,13 +191,13 @@ section {
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
-  gap: 32px;
+  gap: 28px;
 }
 
 .side-image {
-  width: 48%;
-  max-width: 48%;
-  flex: 0 0 48%;
+  width: min(42%, 500px);
+  max-width: 100%;
+  flex: 0 0 min(42%, 500px);
   height: auto;
   border-radius: 18px;
   object-fit: cover;
@@ -217,11 +219,13 @@ footer {
   .z-obrazem,
   .z-obrazem.reverse {
     flex-direction: column;
+    align-items: stretch;
   }
 
   .side-image {
-    max-width: 100%;
     width: 100%;
+    max-width: 100%;
+    flex-basis: auto;
   }
 
   section {
